@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdofaiModLoader", "AdofaiModLoader\AdofaiModLoader.csproj", "{ED735D0D-4C1D-466C-8B43-81576E8554AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdofaiModLoader.Patcher", "AdofaiModLoader.Patcher\AdofaiModLoader.Patcher.csproj", "{8946AEE9-C45D-4D3E-A1B1-509083C037D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdofaiModLoader.Bootstrap", "AdofaiModLoader.Bootstrap\AdofaiModLoader.Bootstrap.csproj", "{81FDC6B3-DB2A-4A84-B9A5-B1727620D76E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdofaiModLoader.Example", "AdofaiModLoader.Example\AdofaiModLoader.Example.csproj", "{B0ED9075-6807-429E-AF37-536C7028ACD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdofaiModLoader.Loader", "AdofaiModLoader.Loader\AdofaiModLoader.Loader.csproj", "{A5BECF09-04A7-4ABB-A31E-2D3DAB00F45B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdofaiModLoader.API", "AdofaiModLoader.API\AdofaiModLoader.API.csproj", "{58AC2370-2BE5-46D7-8981-36F3041F90E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED735D0D-4C1D-466C-8B43-81576E8554AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED735D0D-4C1D-466C-8B43-81576E8554AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED735D0D-4C1D-466C-8B43-81576E8554AE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED735D0D-4C1D-466C-8B43-81576E8554AE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8946AEE9-C45D-4D3E-A1B1-509083C037D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8946AEE9-C45D-4D3E-A1B1-509083C037D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8946AEE9-C45D-4D3E-A1B1-509083C037D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8946AEE9-C45D-4D3E-A1B1-509083C037D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81FDC6B3-DB2A-4A84-B9A5-B1727620D76E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81FDC6B3-DB2A-4A84-B9A5-B1727620D76E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81FDC6B3-DB2A-4A84-B9A5-B1727620D76E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81FDC6B3-DB2A-4A84-B9A5-B1727620D76E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0ED9075-6807-429E-AF37-536C7028ACD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0ED9075-6807-429E-AF37-536C7028ACD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0ED9075-6807-429E-AF37-536C7028ACD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0ED9075-6807-429E-AF37-536C7028ACD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5BECF09-04A7-4ABB-A31E-2D3DAB00F45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5BECF09-04A7-4ABB-A31E-2D3DAB00F45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5BECF09-04A7-4ABB-A31E-2D3DAB00F45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5BECF09-04A7-4ABB-A31E-2D3DAB00F45B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58AC2370-2BE5-46D7-8981-36F3041F90E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58AC2370-2BE5-46D7-8981-36F3041F90E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58AC2370-2BE5-46D7-8981-36F3041F90E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58AC2370-2BE5-46D7-8981-36F3041F90E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
