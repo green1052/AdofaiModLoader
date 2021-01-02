@@ -2,11 +2,18 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using AdofaiModLoader.API.Interfaces;
 
 namespace AdofaiModLoader.Loader
 {
     public static class Loader
     {
+        private static readonly string RootPath = Path.Combine(Directory.GetCurrentDirectory(), "Mod");
+
+        private static readonly string PluginPath = Path.Combine(RootPath, "Plugins");
+
+        private static readonly string DependenciesPath = Path.Combine(PluginPath, "dependencies");
+
         public static void Run()
         {
             LoadDependencies();
@@ -16,7 +23,7 @@ namespace AdofaiModLoader.Loader
         private static void LoadDependencies()
         {
             foreach (string dependency in Directory
-                .GetFiles($"{Directory.GetCurrentDirectory()}\\Mod\\Plugins\\dependencies")
+                .GetFiles(DependenciesPath)
                 .Where(path => path.EndsWith(".dll")))
             {
                 try
@@ -32,10 +39,14 @@ namespace AdofaiModLoader.Loader
 
         private static void LoadPlugins()
         {
-            foreach (string pluginPath in Directory.GetFiles($"{Directory.GetCurrentDirectory()}\\Mod\\Plugins")
+            foreach (string pluginPath in Directory.GetFiles(PluginPath)
                 .Where(path => path.EndsWith(".dll")))
             {
                 Assembly assembly = LoadAssembly(pluginPath);
+
+                if (assembly == null)
+                    continue;
+
                 RunPlugin(assembly);
             }
         }
@@ -43,9 +54,9 @@ namespace AdofaiModLoader.Loader
         private static void RunPlugin(Assembly assembly)
         {
             foreach (Type type in assembly.GetTypes()
-                .Where(type => type.IsClass && typeof(Plugin).IsAssignableFrom(type)))
+                .Where(type => type.IsClass && typeof(IPlugin).IsAssignableFrom(type)))
             {
-                var plugin = Activator.CreateInstance(type) as Plugin;
+                var plugin = Activator.CreateInstance(type) as IPlugin;
 
                 try
                 {

@@ -1,14 +1,14 @@
-﻿using AdofaiModLoader.Loader;
+﻿using AdofaiModLoader.API.Interfaces;
 
 namespace AdofaiModLoader.Example
 {
-    public class Example : Plugin
+    public class Example : IPlugin
     {
-        public override void OnEnabled()
+        public void OnEnabled()
         {
         }
 
-        public override void OnDisabled()
+        public void OnDisabled()
         {
         }
     }

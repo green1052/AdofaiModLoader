@@ -16,9 +16,9 @@ namespace AdofaiModLoader.Bootstrap
                 string rootPath = Path.Combine(Directory.GetCurrentDirectory(), "Mod");
 
                 if (!Directory.Exists(rootPath))
-                    Directory.CreateDirectory(rootPath);
+                    return;
 
-                Assembly.Load(File.ReadAllBytes(Path.Combine(rootPath, "AdofaiModLoader.Loader.dll")))
+                Assembly.LoadFrom(Path.Combine(rootPath, "AdofaiModLoader.Loader.dll"))
                     .GetType("AdofaiModLoader.Loader.Loader")
                     .GetMethod("Run")
                     ?.Invoke(null, null);
