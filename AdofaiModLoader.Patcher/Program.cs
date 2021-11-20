@@ -72,7 +72,7 @@ namespace AdofaiModLoader.Patcher
             Console.WriteLine("Injection completed!");
             Console.WriteLine("Patching code...");
 
-            TypeDef typeDef = FindType(module.Assembly, "ADOBase");
+            TypeDef typeDef = FindType(module.Assembly, "ADOStartup");
 
             MethodDef start = FindMethod(typeDef, "Startup");
 
