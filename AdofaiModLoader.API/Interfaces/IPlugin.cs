@@ -3,7 +3,7 @@
     public interface IPlugin
     {
         void OnEnabled();
-        
+
         void OnDisabled();
     }
 }

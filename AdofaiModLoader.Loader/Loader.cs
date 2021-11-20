@@ -56,7 +56,7 @@ namespace AdofaiModLoader.Loader
             foreach (Type type in assembly.GetTypes()
                 .Where(type => type.IsClass && typeof(IPlugin).IsAssignableFrom(type)))
             {
-                var plugin = Activator.CreateInstance(type) as IPlugin;
+                IPlugin plugin = Activator.CreateInstance(type) as IPlugin;
 
                 try
                 {

@@ -35,7 +35,7 @@ namespace AdofaiModLoader.Patcher
 
             module.Context = ModuleDef.CreateModuleContext();
 
-            ((AssemblyResolver) module.Context.AssemblyResolver).AddToCache(module);
+            ((AssemblyResolver)module.Context.AssemblyResolver).AddToCache(module);
 
             Console.WriteLine("Injecting the Bootstrap Class.");
 
@@ -46,13 +46,10 @@ namespace AdofaiModLoader.Patcher
 
             TypeDef modClass = bootstrap.Types[0];
 
-            foreach (TypeDef type in bootstrap.Types)
+            foreach (TypeDef type in bootstrap.Types.Where(type => type.Name == "Bootstrap"))
             {
-                if (type.Name == "Bootstrap")
-                {
-                    modClass = type;
-                    Console.WriteLine($"[Injection] Hooked to: \"{type.Namespace}.{type.Name}\"");
-                }
+                modClass = type;
+                Console.WriteLine($"[Injection] Hooked to: \"{type.Namespace}.{type.Name}\"");
             }
 
             TypeDef modRefType = modClass;

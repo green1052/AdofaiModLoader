@@ -6,10 +6,12 @@ namespace AdofaiModLoader.Example
     {
         public void OnEnabled()
         {
+            // do something
         }
 
         public void OnDisabled()
         {
+            // do something
         }
     }
 }

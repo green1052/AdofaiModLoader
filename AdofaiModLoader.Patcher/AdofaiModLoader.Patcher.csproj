@@ -32,8 +32,8 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="dnlib, Version=3.3.2.0, Culture=neutral, PublicKeyToken=50e96378b6e77999">
-          <HintPath>..\packages\dnlib.3.3.2\lib\net45\dnlib.dll</HintPath>
+        <Reference Include="dnlib, Version=3.3.5.0, Culture=neutral, PublicKeyToken=50e96378b6e77999">
+          <HintPath>..\packages\dnlib.3.3.5\lib\net45\dnlib.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="System" />
