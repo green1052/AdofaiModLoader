@@ -1,34 +1,33 @@
 ﻿using System.IO;
 using System.Reflection;
 
-namespace AdofaiModLoader.Bootstrap
+namespace AdofaiModLoader.Bootstrap;
+
+public sealed class Bootstrap
 {
-    public sealed class Bootstrap
+    private static bool IsLoaded { get; set; }
+
+    public static void Load()
     {
-        private static bool IsLoaded { get; set; }
+        if (IsLoaded) return;
 
-        public static void Load()
+        try
         {
-            if (IsLoaded) return;
+            string rootPath = Path.Combine(Directory.GetCurrentDirectory(), "Mod");
 
-            try
-            {
-                string rootPath = Path.Combine(Directory.GetCurrentDirectory(), "Mod");
+            if (!Directory.Exists(rootPath))
+                return;
 
-                if (!Directory.Exists(rootPath))
-                    return;
+            Assembly.LoadFrom(Path.Combine(rootPath, "AdofaiModLoader.Loader.dll"))
+                .GetType("AdofaiModLoader.Loader.Loader")
+                .GetMethod("Run")
+                ?.Invoke(null, null);
 
-                Assembly.LoadFrom(Path.Combine(rootPath, "AdofaiModLoader.Loader.dll"))
-                    .GetType("AdofaiModLoader.Loader.Loader")
-                    .GetMethod("Run")
-                    ?.Invoke(null, null);
-
-                IsLoaded = true;
-            }
-            catch
-            {
-                // ignored
-            }
+            IsLoaded = true;
+        }
+        catch
+        {
+            // ignored
         }
     }
 }

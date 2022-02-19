@@ -1,9 +1,8 @@
-﻿namespace AdofaiModLoader.API.Interfaces
-{
-    public interface IPlugin
-    {
-        void OnEnabled();
+﻿namespace AdofaiModLoader.API.Interfaces;
 
-        void OnDisabled();
-    }
+public interface IPlugin
+{
+    void OnEnabled();
+
+    void OnDisabled();
 }
